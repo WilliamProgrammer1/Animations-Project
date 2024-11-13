@@ -1,0 +1,67 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100px;
+    margin: 0;
+    background-color: white;
+}
+
+#animated-div {
+    width: 25%;
+    padding: 20px;
+    font-size: 15px;
+    text-align: center;
+    background-color: orange;
+    animation: moveAndColorChange 4s linear infinite alternate;
+}
+
+#animated-image {
+    animation: image 4s infinite;
+}
+
+@keyframes image {
+    0% {
+        transform: rotate(72deg);
+        width: 100px;
+    }
+    25% {
+        transform: rotate(144deg);
+        width: 200px;
+    }
+    50% {
+        transform: rotate(216deg);
+        width: 450px;
+    }
+    75% {
+        transform: rotate(288deg);
+        width: 300px;
+    }
+    100% {
+        transform: rotate(360deg);
+        width: 200px;
+    }
+}
+
+@keyframes moveAndColorChange {
+    0% {
+        background-color: blue;
+        transform: translateX(-200px);
+        font-size: 16px;
+    }
+    33% {
+        background-color: red;
+        transform: translateX(200px);
+        font-size: 18px;
+    }
+    66% {
+        background-color: magenta;
+        transform: translateX(75px);
+        font-size: 24px;
+    }
+    100% {
+        background-color: yellow;
+        transform: translateX(0px);
+        font-size: 20px;
+    }
+}
